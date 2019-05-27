@@ -7,15 +7,15 @@ defmodule Membrane.Caps.Audio.FLAC do
   """
 
   @type t :: %__MODULE__{
-          min_block_size: pos_integer(),
-          max_block_size: pos_integer(),
-          min_frame_size: non_neg_integer(),
-          max_frame_size: non_neg_integer(),
+          min_block_size: pos_integer() | nil,
+          max_block_size: pos_integer() | nil,
+          min_frame_size: pos_integer() | nil,
+          max_frame_size: pos_integer() | nil,
           sample_rate: pos_integer(),
-          channels: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8,
+          channels: 1..8,
           sample_size: 4 | 8 | 16 | 24 | 32,
-          total_samples: pos_integer(),
-          md5_signature: pos_integer()
+          total_samples: pos_integer() | nil,
+          md5_signature: binary() | nil
         }
 
   @enforce_keys [
