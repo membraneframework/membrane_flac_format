@@ -1,6 +1,6 @@
 # Membrane Multimedia Framework: FLAC audio format definition
 
-[![Build Status](https://travis-ci.com/membraneframework/membrane-caps-audio-flac.svg?branch=master)](https://travis-ci.com/membraneframework/membrane-caps-audio-flac)
+[![CircleCI](https://circleci.com/gh/membraneframework/membrane-caps-audio-flac.svg?style=svg)](https://circleci.com/gh/membraneframework/membrane-caps-audio-flac)
 
 This package provides FLAC audio format definition (so-called caps) for the
 [Membrane Multimedia Framework](https://membraneframework.org).
