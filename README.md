@@ -19,6 +19,10 @@ reason, just add the following line to your `deps` in the `mix.exs` and run
 {:membrane_caps_audio_flac, "~> 0.1"}
 ```
 
+## Sponsors
+
+This project is sponsored by [Abridge AI, Inc.](https://abridge.ai)
+
 ## Copyright and License
 
 Copyright 2019, [Software Mansion](https://swmansion.com/?utm_source=git&utm_medium=readme&utm_campaign=membrane-caps-audio-flac)
