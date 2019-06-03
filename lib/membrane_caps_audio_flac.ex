@@ -13,7 +13,7 @@ defmodule Membrane.Caps.Audio.FLAC do
           max_frame_size: pos_integer() | nil,
           sample_rate: pos_integer(),
           channels: 1..8,
-          sample_size: 4 | 8 | 16 | 24 | 32,
+          sample_size: 4 | 8 | 12 | 16 | 24 | 32,
           total_samples: pos_integer() | nil,
           md5_signature: binary() | nil
         }
