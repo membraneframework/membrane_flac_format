@@ -1,6 +1,6 @@
-defmodule Membrane.Caps.Audio.FLAC.Metadata do
+defmodule Membrane.Caps.Audio.FLAC.FrameMetadata do
   @moduledoc """
-  Module defining metadata struct for FLAC buffers.
+  Module defining metadata struct for FLAC buffers with audio frames.
 
   Based on contents of [frame header](https://xiph.org/flac/format.html#frame_header)
   """
