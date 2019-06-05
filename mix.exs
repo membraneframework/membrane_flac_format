@@ -22,7 +22,8 @@ defmodule Membrane.Caps.Audio.FLAC.Mixfile do
     [
       main: "readme",
       extras: ["README.md"],
-      source_ref: "v#{@version}"
+      source_ref: "v#{@version}",
+      nest_modules_by_prefix: [Membrane.Caps.Audio.FLAC]
     ]
   end
 
