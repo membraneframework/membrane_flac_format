@@ -21,7 +21,7 @@ reason, just add the following line to your `deps` in the `mix.exs` and run
 
 ## Sponsors
 
-This project is sponsored by [Abridge AI, Inc.](https://abridge.ai)
+This project is sponsored by [Abridge AI, Inc.](https://abridge.com)
 
 ## Copyright and License
 
