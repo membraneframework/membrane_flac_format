@@ -1,17 +1,17 @@
-defmodule Membrane.Caps.Audio.FLAC.Mixfile do
+defmodule Membrane.FLAC.Mixfile do
   use Mix.Project
 
-  @version "0.1.1"
-  @github_url "https://github.com/membraneframework/membrane-caps-audio-flac"
+  @version "0.2.0"
+  @github_url "https://github.com/membraneframework/membrane_flac_format"
 
   def project do
     [
-      app: :membrane_caps_audio_flac,
+      app: :membrane_flac_format,
       version: @version,
       elixir: "~> 1.7",
-      description: "Membrane Multimedia Framework (FLAC audio format definition)",
+      description: "Membrane FLAC audio format definition",
       package: package(),
-      name: "Membrane Caps: Audio.FLAC",
+      name: "Membrane FLAC format",
       source_url: @github_url,
       docs: docs(),
       deps: deps()
@@ -21,26 +21,28 @@ defmodule Membrane.Caps.Audio.FLAC.Mixfile do
   defp docs do
     [
       main: "readme",
-      extras: ["README.md"],
+      extras: ["README.md", LICENSE: [title: "License"]],
       source_ref: "v#{@version}",
-      nest_modules_by_prefix: [Membrane.Caps.Audio.FLAC]
+      nest_modules_by_prefix: [Membrane.FLAC]
     ]
   end
 
   defp package do
     [
       maintainers: ["Membrane Team"],
-      licenses: ["Apache 2.0"],
+      licenses: ["Apache-2.0"],
       links: %{
         "GitHub" => @github_url,
-        "Membrane Framework Homepage" => "https://membraneframework.org"
+        "Membrane Framework Homepage" => "https://membrane.stream"
       }
     ]
   end
 
   defp deps do
     [
-      {:ex_doc, "~> 0.20", only: :dev, runtime: false}
+      {:ex_doc, "~> 0.30", only: :dev, runtime: false},
+      {:dialyxir, "~> 1.4", only: :dev, runtime: false},
+      {:credo, "~> 1.7", only: :dev, runtime: false}
     ]
   end
 end

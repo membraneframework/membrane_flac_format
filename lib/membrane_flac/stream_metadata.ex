@@ -1,4 +1,4 @@
-defmodule Membrane.Caps.Audio.FLAC.StreamMetadata do
+defmodule Membrane.FLAC.StreamMetadata do
   @moduledoc """
   Module defining metadata struct for FLAC buffers with stream metadata.
 

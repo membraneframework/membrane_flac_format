@@ -1,8 +1,8 @@
-defmodule Membrane.Caps.Audio.FLAC do
+defmodule Membrane.FLAC do
   @moduledoc """
-  Membrane Caps for audio encoded with [Free Lossless Audio Codec](https://xiph.org/flac/index.html)
+  Membrane stream format for audio encoded with [Free Lossless Audio Codec](https://xiph.org/flac/index.html)
 
-  Provides Caps struct describing FLAC-encoded audio stream, currently supports only metadata from
+  Currently supports only metadata from
   [`STREAMINFO` metadata block](https://xiph.org/flac/format.html#metadata_block_streaminfo)
   """
 
