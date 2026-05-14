@@ -1,7 +1,7 @@
 defmodule Membrane.FLAC.Mixfile do
   use Mix.Project
 
-  @version "0.2.0"
+  @version "0.2.1"
   @github_url "https://github.com/membraneframework/membrane_flac_format"
 
   def project do
@@ -14,8 +14,23 @@ defmodule Membrane.FLAC.Mixfile do
       name: "Membrane FLAC format",
       source_url: @github_url,
       docs: docs(),
-      deps: deps()
+      deps: deps(),
+      dialyzer: dialyzer()
     ]
+  end
+
+  defp dialyzer() do
+    opts = [
+      flags: [:error_handling]
+    ]
+
+    if System.get_env("CI") == "true" do
+      # Store PLTs in cacheable directory for CI
+      File.mkdir_p!(Path.join([__DIR__, "priv", "plts"]))
+      [plt_local_path: "priv/plts", plt_core_path: "priv/plts"] ++ opts
+    else
+      opts
+    end
   end
 
   defp docs do
@@ -40,9 +55,9 @@ defmodule Membrane.FLAC.Mixfile do
 
   defp deps do
     [
-      {:ex_doc, "~> 0.30", only: :dev, runtime: false},
-      {:dialyxir, "~> 1.4", only: :dev, runtime: false},
-      {:credo, "~> 1.7", only: :dev, runtime: false}
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
+      {:dialyxir, ">= 0.0.0", only: :dev, runtime: false},
+      {:credo, ">= 0.0.0", only: :dev, runtime: false}
     ]
   end
 end
