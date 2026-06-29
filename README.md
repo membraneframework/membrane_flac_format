@@ -18,7 +18,7 @@ reason, just add the following line to your `deps` in the `mix.exs` and run
 `mix deps.get`.
 
 ```elixir
-{:membrane_flac_format, "~> 0.2.1"}
+{:membrane_flac_format, "~> 0.2.2"}
 ```
 
 ## Sponsors
